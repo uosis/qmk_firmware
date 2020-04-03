@@ -1,3 +1,4 @@
-#!/bin/sh
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p teensy-loader-cli
 
-teensy_loader_cli -v -w --mcu atmega32u4 $1
+sudo teensy-loader-cli -v -w --mcu atmega32u4 $1
