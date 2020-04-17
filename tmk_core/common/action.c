@@ -63,6 +63,8 @@ __attribute__((weak)) bool get_ignore_mod_tap_interrupt(uint16_t keycode) { retu
  */
 void action_exec(keyevent_t event) {
     if (!IS_NOEVENT(event)) {
+        uprintf("K: col=%u row=%u pr=%u\n", event.key.col, event.key.row, event.pressed);
+
         dprint("\n---- action_exec: start -----\n");
         dprint("EVENT: ");
         debug_event(event);
